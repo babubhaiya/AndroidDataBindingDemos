@@ -62,7 +62,7 @@
                         android:textColor="@color/colorAccent"
                         android:textSize="@dimen/news_details_font_size"
                         android:onClick="@{postHandlers.onViewClick}"
-                        app:text="@{post.score}" />
+                        android:text="@{String.valueOf(post.score)}" />
 
                     <TextView
                         android:id="@+id/text_post_separator"

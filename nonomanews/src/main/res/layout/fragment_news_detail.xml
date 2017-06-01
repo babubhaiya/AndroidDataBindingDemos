@@ -37,7 +37,7 @@
                     android:id="@+id/news_details_views_count_txv"
                     style="@style/NewsCommonTextStyle"
                     android:layout_below="@id/news_details_title_txv"
-                    app:text="@{selectedPost.score}"
+                    android:text="@{String.valueOf(selectedPost.score)}"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp" />
 
