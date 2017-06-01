@@ -10,6 +10,7 @@ Modules
 A simple demo app consuming [HackerNews api] (https://github.com/HackerNews/API) to show Hacker News. 
 This app also uses Retrofit for making http requests.
 
+![NonomaNews](/screens/nonoma_news.png?raw=true "NonomaNews")
 
 
 References
