@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--TextView styles-->
+
+    <style name="NewsCommonTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="NewsButtonStyle" parent="NewsCommonTextStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/news_card_bg</item>
+        <item name="android:padding">@dimen/news_label_padding</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/news_label_font_size</item>
+
+    </style>
+
+
+</resources>

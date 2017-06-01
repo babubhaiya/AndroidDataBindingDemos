@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="comment"
+            type="com.napolean.nonomanews.data.model.Comment" />
+
+        <!-- TODO Adding handlers if required -->
+
+    </data>
+
+
+    <!--Comments Section-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <!--Author name, written normally-->
+        <TextView
+            android:id="@+id/comment_by_name_txv"
+            style="@style/NewsCommonTextStyle"
+            android:text="@{comment.by}"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <!--Binding Adapter to show html formatted text-->
+        <TextView
+            android:id="@+id/comment_content_txv"
+            style="@style/NewsCommonTextStyle"
+            android:layout_margin="10dp"
+            app:htmlText="@{comment.text}" />
+
+        <!--Binding Adapter to show formatted Date-->
+        <TextView
+            android:id="@+id/comment_date_txv"
+            style="@style/NewsCommonTextStyle"
+            android:layout_margin="10dp"
+            app:text="@{comment.time}" />
+
+    </LinearLayout>
+
+</layout>

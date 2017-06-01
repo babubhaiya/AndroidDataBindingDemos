@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="selectedPost"
+            type="com.napolean.nonomanews.data.model.Post" />
+    </data>
+
+
+    <!--Layout containing news details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/news_details_title_txv"
+                    style="@style/NewsCommonTextStyle"
+                    android:text="@{selectedPost.title}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/news_details_views_count_txv"
+                    style="@style/NewsCommonTextStyle"
+                    android:layout_below="@id/news_details_title_txv"
+                    app:text="@{selectedPost.score}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/news_details_author_txv"
+                    style="@style/NewsCommonTextStyle"
+                    android:layout_below="@id/news_details_views_count_txv"
+                    android:text="@{selectedPost.by}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--Comments on the selected news-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_details_comments_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</layout>

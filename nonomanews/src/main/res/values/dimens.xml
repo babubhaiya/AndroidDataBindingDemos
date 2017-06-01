@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="news_title_font_size">20sp</dimen>
+    <dimen name="news_details_font_size">12sp</dimen>
+    <dimen name="news_author_font_size">16sp</dimen>
+    <dimen name="news_label_font_size">12sp</dimen>
+    <dimen name="news_label_padding">16dp</dimen>
+    <dimen name="news_text_separator_margin">8dp</dimen>
+</resources>
